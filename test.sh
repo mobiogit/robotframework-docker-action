@@ -10,5 +10,6 @@ docker run --shm-size=$ALLOWED_SHARED_MEMORY \
   -e ROBOT_OPTIONS="$ROBOT_OPTIONS" \
   -e ROBOT_TESTS_DIR="$TESTS_DIR" \
   -v $REPORTS_DIR:/opt/robotframework/reports:Z \
+  -v .:/opt/robotframework/tests:Z \
   --user $(id -u):$(id -g) \
   $ROBOT_RUNNER_IMAGE
