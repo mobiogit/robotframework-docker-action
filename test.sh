@@ -10,6 +10,6 @@ docker run --shm-size=$ALLOWED_SHARED_MEMORY \
   -e ROBOT_TESTS_DIR="/opt/robotframework/tests/$ROBOT_TESTS_DIR" \
   -v $REPORTS_DIR:/opt/robotframework/reports:Z \
   -v .:/opt/robotframework/tests:Z \
-  -v pip-requirements.txt:/opt/robotframework/pip-requirements.txt:Z \
+  -v ./pip-requirements.txt:/opt/robotframework/pip-requirements.txt:Z \
   --user $(id -u):$(id -g) \
   $ROBOT_RUNNER_IMAGE
